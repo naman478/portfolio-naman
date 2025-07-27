@@ -43,8 +43,8 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-16">
+      <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

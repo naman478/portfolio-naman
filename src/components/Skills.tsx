@@ -88,8 +88,8 @@ export const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-16">
+      <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -123,33 +123,18 @@ export const Skills = () => {
                   <h3 className="text-xl font-bold">{category.title}</h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-3">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
                       key={skill.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }}
                       viewport={{ once: true }}
-                      className="flex items-center justify-between"
+                      className="flex items-center p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors"
                     >
-                      <div className="flex items-center">
-                        <skill.icon className="w-4 h-4 text-primary mr-3" />
-                        <span className="font-medium">{skill.name}</span>
-                      </div>
-                      
-                      <div className="flex items-center space-x-2">
-                        <div className="w-24 h-2 bg-background/50 rounded-full overflow-hidden">
-                          <motion.div
-                            className="h-full bg-gradient-to-r from-primary to-primary-glow"
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            transition={{ duration: 1, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) + 0.3 }}
-                            viewport={{ once: true }}
-                          />
-                        </div>
-                        <span className="text-sm text-muted-foreground min-w-[3rem]">{skill.level}%</span>
-                      </div>
+                      <skill.icon className="w-5 h-5 text-primary mr-3" />
+                      <span className="font-medium text-sm">{skill.name}</span>
                     </motion.div>
                   ))}
                 </div>

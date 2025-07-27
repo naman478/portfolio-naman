@@ -71,8 +71,8 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-16">
+      <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +106,7 @@ export const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-64 lg:h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-48 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
@@ -120,17 +120,16 @@ export const Projects = () => {
                   </div>
 
                   {/* Project content */}
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold mb-3 text-primary">{project.title}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 text-primary">{project.title}</h3>
+                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                       {project.description}
                     </p>
 
-                    {/* Features */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold mb-3">Key Features:</h4>
-                      <ul className="space-y-2">
-                        {project.features.map((feature, i) => (
+                    {/* Features - show only first 2 */}
+                    <div className="mb-4">
+                      <ul className="space-y-1">
+                        {project.features.slice(0, 2).map((feature, i) => (
                           <li key={i} className="flex items-start text-sm">
                             <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 mr-3 flex-shrink-0" />
                             <span className="text-muted-foreground">{feature}</span>
@@ -140,11 +139,11 @@ export const Projects = () => {
                     </div>
 
                     {/* Tech stack */}
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tags.map((tag) => (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.slice(0, 4).map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
+                          className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/20"
                         >
                           {tag}
                         </span>
@@ -152,16 +151,15 @@ export const Projects = () => {
                     </div>
 
                     {/* Action buttons */}
-                    <div className="flex gap-4">
-                      <Button variant="default" className="group">
-                        <Globe className="w-4 h-4 mr-2" />
+                    <div className="flex gap-3">
+                      <Button variant="default" size="sm" className="group">
+                        <Globe className="w-3 h-3 mr-2" />
                         Live Demo
-                        <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </Button>
                       
-                      <Button variant="outline">
-                        <Github className="w-4 h-4 mr-2" />
-                        Source Code
+                      <Button variant="outline" size="sm">
+                        <Github className="w-3 h-3 mr-2" />
+                        Code
                       </Button>
                     </div>
                   </div>

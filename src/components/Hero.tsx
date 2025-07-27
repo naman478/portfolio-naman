@@ -6,10 +6,10 @@ import profileHero from '@/assets/profile-hero.jpg';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <Scene3D />
       
-      <div className="container mx-auto px-6 z-10">
+      <div className="container mx-auto px-6 lg:px-12 z-10 max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <motion.div
