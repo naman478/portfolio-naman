@@ -44,34 +44,13 @@ export const About = () => {
             About <span className="text-primary">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate Computer Science student at Jaypee Institute of Information Technology, Noida, 
-            with hands-on experience in full-stack development. I specialize in building scalable web applications 
-            and have contributed to platforms serving millions of users during my internships.
+         Developer by trade, problem solver by nature ⚡<br/>
+CSE grad from JIIT Noida building web experiences that don't make users question their life choices.
+ When I'm not coding, I'm probably debugging my life's infinite loop.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="glass-card hover-glow p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <stat.icon className="w-6 h-6 text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-3xl font-bold text-primary mb-2">{stat.value}</h3>
-                <p className="font-semibold mb-1">{stat.label}</p>
-                <p className="text-sm text-muted-foreground">{stat.description}</p>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

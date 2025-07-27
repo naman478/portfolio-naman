@@ -12,7 +12,9 @@ import {
   Zap,
   Globe,
   Server,
-  Smartphone
+  Smartphone,
+  ClipboardList,
+  Image ,
 } from 'lucide-react';
 
 export const Skills = () => {
@@ -25,7 +27,20 @@ export const Skills = () => {
         { name: "Java", icon: Code, level: 85 },
         { name: "JavaScript", icon: Code, level: 95 },
         { name: "HTML", icon: Globe, level: 95 },
-        { name: "CSS", icon: Monitor, level: 90 }
+        { name: "CSS", icon: Monitor, level: 90 },
+        { name: "SQL", icon: FileCode, level: 90 }
+      ]
+    },
+    {
+      title: "Developer Tools",
+      icon: Wrench,
+      skills: [
+        { name: "VS Code", icon: Monitor, level: 95 },
+        { name: "Git/GitHub", icon: GitBranch, level: 90 },
+        { name: "Postman", icon: MessageSquare, level: 85 },
+        { name: "Jira", icon: ClipboardList, level: 80 },
+        { name: "Canva", icon: Image, level: 70 },
+         { name: "OpenSearch", icon: Database, level: 75 },
       ]
     },
     {
@@ -38,23 +53,13 @@ export const Skills = () => {
       ]
     },
     {
-      title: "Developer Tools",
-      icon: Wrench,
-      skills: [
-        { name: "VS Code", icon: Monitor, level: 95 },
-        { name: "Git/GitHub", icon: GitBranch, level: 90 },
-        { name: "Postman", icon: MessageSquare, level: 85 },
-        { name: "OpenSearch", icon: Database, level: 75 }
-      ]
-    },
-    {
       title: "Technologies & Frameworks",
       icon: Layers,
       skills: [
-        { name: "Spring Boot", icon: Zap, level: 85 },
         { name: "ReactJS", icon: Globe, level: 95 },
         { name: "Node.js", icon: Server, level: 90 },
-        { name: "Express.js", icon: Server, level: 90 }
+        { name: "Express.js", icon: Server, level: 90 },
+         { name: "Spring Boot", icon: Zap, level: 85 },
       ]
     }
   ];
@@ -84,6 +89,11 @@ export const Skills = () => {
       title: "Problem Solving",
       description: "Solved 500+ DSA problems on LeetCode & GeeksforGeeks",
       icon: "💡"
+    },
+    {
+     title: "Bright Student Award",
+     description: "Certificate of Recognition for Outstanding Performance in 2nd Year",
+     icon: "⭐"
     }
   ];
 

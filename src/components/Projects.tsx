@@ -2,9 +2,10 @@ import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, Globe } from 'lucide-react';
-import inelfProject from '@/assets/inelf-project.jpg';
-import bikeRentalProject from '@/assets/bike-rental-project.jpg';
-import expenseTrackerProject from '@/assets/expense-tracker-project.jpg';
+import inelfProject from '@/assets/inelf.png';
+import interviewProject from '@/assets/ai-interview.webp';
+import bikeRentalProject from '@/assets/bike rental.jpg';
+import expenseTrackerProject from '@/assets/expense-tracker.png';
 
 export const Projects = () => {
   const projects = [
@@ -12,7 +13,7 @@ export const Projects = () => {
       title: "inelf.com",
       description: "Free study platform designed to make learning as easy as possible using interactive slides, integrated code editor, and engaging quizzes. Built for desktop users to provide the best study experience.",
       image: inelfProject,
-      tags: ["React", "Node.js", "MongoDB", "Express", "Code Editor"],
+      tags: ["React", "Javascript", "Node.js", "MongoDB", "Express", "Code Editor"],
       features: [
         "Interactive study slides with rich content",
         "Built-in code editor for practice",
@@ -26,16 +27,16 @@ export const Projects = () => {
     {
       title: "AI Mock Interview Prep",
       description: "AI-powered platform for mock interview preparation, helping candidates practice and improve their interview skills with personalized feedback.",
-      image: inelfProject, // Reusing image for now
-      tags: ["React", "AI/ML", "TypeScript", "OpenAI", "WebRTC"],
+      image: interviewProject, 
+      tags: ["React", "TypeScript", "Tailwind CSS", "OpenAI", "WebRTC"],
       features: [
         "AI-powered interview simulation",
         "Real-time feedback and scoring",
         "Industry-specific question banks",
         "Performance analytics dashboard"
       ],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://interview-prep-ivory-delta.vercel.app/",
+      githubLink: "https://github.com/naman478/interview-prep",
       featured: false
     },
     {
@@ -44,13 +45,13 @@ export const Projects = () => {
       image: bikeRentalProject,
       tags: ["React", "Node.js", "Express", "MongoDB", "CSS"],
       features: [
-        "Real-time bike availability system",
+        "Bike Renting system",
         "Dual user roles: renters and owners",
         "Comprehensive booking management",
         "Unified dashboard for all operations"
       ],
       liveLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/naman478/bike-rental",
       featured: false
     },
     {
@@ -64,8 +65,8 @@ export const Projects = () => {
         "Monthly budget management",
         "Visual spending analytics"
       ],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://expense-tracker-peach-nine.vercel.app/",
+      githubLink: "https://github.com/naman478/expense_tracker",
       featured: false
     }
   ];
@@ -106,7 +107,7 @@ export const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-48 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
@@ -150,18 +151,21 @@ export const Projects = () => {
                       ))}
                     </div>
 
-                    {/* Action buttons */}
-                    <div className="flex gap-3">
-                      <Button variant="default" size="sm" className="group">
-                        <Globe className="w-3 h-3 mr-2" />
-                        Live Demo
-                      </Button>
-                      
-                      <Button variant="outline" size="sm">
-                        <Github className="w-3 h-3 mr-2" />
-                        Code
-                      </Button>
-                    </div>
+                   {/* Action buttons */}
+<div className="flex gap-3">
+  <a href={project.liveLink.trim()} target="_blank" rel="noopener noreferrer">
+    <Button variant="default" size="sm" className="group">
+      <Globe className="w-3 h-3 mr-2" />
+      Live Demo
+    </Button>
+  </a>
+  <a href={project.githubLink.trim()} target="_blank" rel="noopener noreferrer">
+    <Button variant="outline" size="sm">
+      <Github className="w-3 h-3 mr-2" />
+      Code
+    </Button>
+  </a>
+</div>
                   </div>
                 </div>
               </Card>

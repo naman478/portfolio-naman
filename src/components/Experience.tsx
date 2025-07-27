@@ -1,24 +1,23 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { CalendarDays, MapPin, Building2 } from 'lucide-react';
-import starHealthLogo from '@/assets/star-health-logo.jpg';
-import vegavidLogo from '@/assets/vegavid-logo.jpg';
+import starHealthLogo from '@/assets/star-health-logo.png';
+import vegavidLogo from '@/assets/vegavid_technology_logo.jpg';
 
 export const Experience = () => {
   const experiences = [
     {
       company: "Star Health and Allied Insurance Co. Limited",
       role: "SDE Intern",
-      duration: "Jan 2025 - Present",
+      duration: "Jan 2025 - Jul 2025",
       location: "Gurgaon, India",
       logo: starHealthLogo,
       achievements: [
-        "Developed backend for StarHealth Customer app serving 5M+ customers and 30k+ daily active users",
         "Built Star Wellness Program backend enabling 1,000+ user signups in first month through secure APIs",
-        "Enhanced policy renewal feature driving $2.4M+ monthly revenue with MongoDB and PostgreSQL optimizations",
+        "Enhanced policy renewal feature which driving $2.4M+ monthly revenue with MongoDB and PostgreSQL improvements",
         "Collaborated with UI, Product, and Platform teams in Agile environment for end-to-end feature delivery"
       ],
-      current: true
+      current: false
     },
     {
       company: "Vegavid Technologies",
@@ -75,7 +74,7 @@ export const Experience = () => {
                 <div className="grid lg:grid-cols-4 gap-6">
                   {/* Company logo */}
                   <div className="flex justify-center lg:justify-start">
-                    <div className="w-24 h-24 rounded-xl overflow-hidden border border-primary/20 bg-background/50">
+                    <div className="w-46 h-46 rounded-2xl overflow-hidden border border-primary/20 bg-background/50">
                       <img
                         src={exp.logo}
                         alt={`${exp.company} logo`}

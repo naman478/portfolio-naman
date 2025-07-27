@@ -26,7 +26,7 @@ export const Hero = () => {
             >
               Hello, I'm{' '}
               <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Your Name
+                Naman
               </span>{' '}
               👋
             </motion.h1>
@@ -37,7 +37,7 @@ export const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Full-Stack Developer & Software Engineering Student
+              Full-Stack Developer | Software Engineer
               <br />
               <span className="text-primary">Building innovative solutions for the web 🚀</span>
             </motion.p>
@@ -48,8 +48,8 @@ export const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Currently pursuing B.Tech in Computer Science at JIIT Noida with 8.0 CGPA. 
-              Experienced in building scalable applications serving millions of users.
+              Completed B.Tech in Computer Science from JIIT Noida with 8.0 CGPA.
+              Experienced in building scalable applications.
             </motion.p>
 
             <motion.div
@@ -58,15 +58,19 @@ export const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <Button variant="hero" size="lg" className="group">
-                <Mail className="w-4 h-4 mr-2" />
-                Contact Me
-              </Button>
+              <a href="mailto:namanjhanwar953@gmail.com">
+      <Button variant="hero" size="lg" className="group">
+        <Mail className="w-4 h-4 mr-2" />
+        Contact Me
+      </Button>
+    </a>
               
-              <Button variant="glass" size="lg">
-                <Download className="w-4 h-4 mr-2" />
-                Resume
-              </Button>
+              <a href="https://drive.google.com/file/d/1RYPnLB7VKXhBLSIk3KywvrXUfgotynuk/view" target="_blank" rel="noopener noreferrer">
+  <Button variant="glass" size="lg">
+    <Download className="w-4 h-4 mr-2" />
+    Resume
+  </Button>
+</a>
             </motion.div>
 
             {/* Social Links */}
@@ -76,18 +80,29 @@ export const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              <Button variant="ghost" size="icon" className="hover-glow">
-                <Github className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover-glow">
-                <Linkedin className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover-glow">
-                <Mail className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover-glow">
-                <Phone className="w-5 h-5" />
-              </Button>
+              <a href="https://github.com/naman478/" target="_blank" rel="noopener noreferrer">
+      <Button variant="ghost" size="icon" className="hover-glow">
+        <Github className="w-5 h-5" />
+      </Button>
+    </a>
+
+    <a href="https://www.linkedin.com/in/naman-jhanwar/" target="_blank" rel="noopener noreferrer">
+      <Button variant="ghost" size="icon" className="hover-glow">
+        <Linkedin className="w-5 h-5" />
+      </Button>
+    </a>
+
+    <a href="mailto:namanjhanwar953@gmail.com">
+      <Button variant="ghost" size="icon" className="hover-glow">
+        <Mail className="w-5 h-5" />
+      </Button>
+    </a>
+
+    <a href="tel:+917410850685">
+      <Button variant="ghost" size="icon" className="hover-glow">
+        <Phone className="w-5 h-5" />
+      </Button>
+      </a>
             </motion.div>
           </motion.div>
 
@@ -111,16 +126,7 @@ export const Hero = () => {
                 />
               </motion.div>
               
-              {/* Floating badge */}
-              <motion.div
-                className="absolute -bottom-4 -right-4 glass-card px-4 py-2 rounded-full border border-primary/30"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <span className="text-sm font-semibold text-primary">Open to Work</span>
-              </motion.div>
+    
             </div>
           </motion.div>
         </div>

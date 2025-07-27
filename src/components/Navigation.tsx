@@ -57,12 +57,11 @@ export const Navigation = () => {
               className="font-bold text-xl cursor-pointer"
               onClick={() => scrollToSection('#')}
             >
-              <span className="text-primary">Portfolio</span>
-              <span className="text-foreground">.dev</span>
+              
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6 flex-1 justify-center">
               {navItems.map((item) => (
                 <motion.button
                   key={item.label}
@@ -76,27 +75,30 @@ export const Navigation = () => {
               ))}
             </div>
 
-            {/* Desktop CTA */}
-            <div className="hidden md:block">
-              <Button variant="hero" size="sm">
-                <Download className="w-4 h-4 mr-2" />
-                Resume
-              </Button>
+            {/* Desktop CTA - Positioned with margin from right */}
+            <div className="hidden md:block mr-8">
+              <a href="https://drive.google.com/file/d/1RYPnLB7VKXhBLSIk3KywvrXUfgotynuk/view" target="_blank" rel="noopener noreferrer">
+                <Button variant="hero" size="sm">
+                  <Download className="w-4 h-4 mr-2" />
+                  Resume
+                </Button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-5 h-5" />
-              ) : (
-                <Menu className="w-5 h-5" />
-              )}
-            </Button>
+            <div className="md:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
+              </Button>
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -130,12 +132,16 @@ export const Navigation = () => {
               </motion.button>
             ))}
             
-            <div className="px-6 py-3">
-              <Button variant="hero" size="sm" className="w-full">
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
-              </Button>
-            </div>
+<div className="px-6 py-3">
+  <Button 
+    variant="default" 
+    size="sm" 
+    className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground"
+  >
+    <Download className="w-4 h-4 mr-2" />
+    Download Resume
+  </Button>
+</div>
           </div>
         </div>
       </motion.div>
